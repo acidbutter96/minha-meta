@@ -4,14 +4,14 @@ import GlobalStyles from './styles/GlobalStyles';
 import dark from './styles/themes/dark';
 import dark2 from './styles/themes/dark2';
 
-import Layout from './components/Layout';
+import Routes from './routes';
 
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={dark2}>
       <GlobalStyles/>
-      <Layout/>
+      <Routes/>
     </ThemeProvider>
   );
 }

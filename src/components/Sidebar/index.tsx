@@ -23,21 +23,21 @@ const Sidebar: React.FC = () => {
             </Header>
             <MenuContainer>
                 <Top>
-                    <MenuRoute>
+                    <MenuRoute href="/charts">
                         <MdShowChart />
                         Charts
                     </MenuRoute>
-                    <MenuRoute>
+                    <MenuRoute href="/sales">
                         <MdAttachMoney />
-                        Charts
+                        Vendas
                     </MenuRoute>
-                    <MenuRoute>
+                    <MenuRoute href="/goals">
                         <MdDashboard />
-                        Charts
+                        Metas
                     </MenuRoute>
                 </Top>
                 <Bottom>
-                    <MenuRoute>
+                    <MenuRoute href="#">
                         <MdExitToApp />
                         Sair
                     </MenuRoute>

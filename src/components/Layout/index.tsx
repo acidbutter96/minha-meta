@@ -4,11 +4,13 @@ import {Container} from './styles';
 import Content from '../Content';
 import Sidebar from '../Sidebar';
 
-const Layout: React.FC = ()=>{
+const Layout: React.FC = ({children})=>{
     return (
         <Container>
             <Sidebar/>
-            <Content/>
+            <Content>
+                {children}
+            </Content>
         </Container>
     );
 }
