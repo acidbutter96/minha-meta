@@ -1,11 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from './styles/GlobalStyles';
+import dark from './styles/themes/dark';
 
-const App: React.FC = () =>{
+
+const App: React.FC = () => {
   return (
-    <>
+    <ThemeProvider theme={dark}>
+      <GlobalStyles/>
       <h1>Monthly Sales Chart</h1>
-    </>
+    </ThemeProvider>
   );
 }
 
