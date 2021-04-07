@@ -55,26 +55,15 @@ export const Sales = styled.div`
     overflow-x: hidden;
 
     ::-webkit-scrollbar{
-        width: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb{
-        background-color: ${props => props.theme.colors.secondary};
-        border-radius: 20px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background-color: ${props => props.theme.colors.primary};
+        width: 0px;
     }
     
     height: 400px;
     width: 100%;
     `;
 
-export const Updates = styled.div`
+export const Update = styled.div`
         grid-area: 'UP';
-        
-        background-color: ${props => props.theme.colors.quaternary};
     `;
 export const BttmWidgets = styled.div`
         grid-area: 'BW';

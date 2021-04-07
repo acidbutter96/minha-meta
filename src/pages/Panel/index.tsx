@@ -5,15 +5,14 @@ import {
     SalesPanel,
     SaleTitle,
     Sales,
-    Updates,
+    Update,
     BttmWidgets,
     WeekScore,
     CreateSale,
 } from './styles';
 import SaleItem from '../../components/SaleItem';
 import Tips from '../../components/Tips';
-
-import logo from '../../assets/images/vectors/sales.svg';
+import Updates from '../../components/Updates';
 
 interface IRouteParams {
     match: {
@@ -50,7 +49,7 @@ const Panel: React.FC<IRouteParams> = ({ match }) => {
             amount: 15000
         },
         {
-            percent: -.25,
+            percent: .25,
             date: '2021-04-01',
             amount: 15000
         },
@@ -68,62 +67,20 @@ const Panel: React.FC<IRouteParams> = ({ match }) => {
                     <SaleTitle>
                         <h1>Painel do Vendedor</h1>
                         <Sales>
-                            <SaleItem
-                                percent={.2}
-                                date="16-12-2991"
-                                amount={12762}
-                            >
-                            </SaleItem>
-                            <SaleItem
-                                percent={.2}
-                                date="16-12-2991"
-                                amount={12762}
-                            >
-                            </SaleItem>
-                            <SaleItem
-                                percent={.2}
-                                date="16-12-2991"
-                                amount={12762}
-                            >
-                            </SaleItem>
-                            <SaleItem
-                                percent={.2}
-                                date="16-12-2991"
-                                amount={12762}
-                            >
-                            </SaleItem>
-                            <SaleItem
-                                percent={.2}
-                                date="16-12-2991"
-                                amount={12762}
-                            >
-                            </SaleItem>
-                            <SaleItem
-                                percent={.2}
-                                date="16-12-2991"
-                                amount={12762}
-                            >
-                            </SaleItem>
-                            <SaleItem
-                                percent={.2}
-                                date="16-12-2991"
-                                amount={12762}
-                            >
-                            </SaleItem>
-                            <SaleItem
-                                percent={.2}
-                                date="16-12-2991"
-                                amount={12762}
-                            >
-                            </SaleItem>
-
+                            {salesData.map((item) => <SaleItem
+                                percent={item.percent}
+                                date={item.date}
+                                amount={item.amount}
+                            ></SaleItem>)}
                         </Sales>
                     </SaleTitle>
                     <Tips></Tips>
                 </SalesPanel>
-                <Updates>
-                    oi
-                </Updates>
+                <Update>
+                    <Updates>
+                        oi
+                    </Updates>
+                </Update>
             </TopWidgets>
             <BttmWidgets>
                 <WeekScore>
