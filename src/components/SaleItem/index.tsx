@@ -30,21 +30,21 @@ const SaleItem: React.FC<ISaleItem> = ({ percent, date, amount }) => {
     let data = date.split("-");
 
     if (percent < 0) {
-        color = '.danger';
+        color = 'danger';
     } else {
-        color = '.success';
+        color = 'success';
     }
 
     return (
         <Container>
-            <ListButton>
+            <ListButton className={color}>
                 {percent * 100} %
                 <MdKeyboardArrowUp className="react-icons" />
             </ListButton>
             <Amount>
                 {moneyFormat(108080.2)}
             </Amount>
-            <Date>
+            <Date className="date">
                 {data[2]}/{data[1]}/{data[0]}
             </Date>
         </Container>

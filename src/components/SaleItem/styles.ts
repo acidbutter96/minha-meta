@@ -17,7 +17,21 @@ export const Container = styled.li`
         transform: translateX(3px);
     }
 
+    &:hover>.date{
+        left: 10px;
+    }
+
     border-bottom: 1px solid ${props => props.theme.colors.secondary};
+
+    .danger {
+        background-color: rgba(255,0,0,.2);
+        color: ${props => props.theme.colors.warning};
+    }
+
+    .success {
+        background-color: rgba(0,255,0,.2);
+        color: ${props => props.theme.colors.success};
+    }
 `;
 export const ListButton = styled.div`
     width: 98px;
@@ -34,9 +48,6 @@ export const ListButton = styled.div`
     padding: 0 5px;
 
     border-radius: 23px;
-    background-color: rgba(255,0,0,.4);
-
-    color: ${props => props.theme.colors.warning};
 
     .react-icons {
         vertical-align: middle;
@@ -54,6 +65,7 @@ export const Date = styled.div`
     position: relative;
     bottom: -15px;
     left: 20px;
+    transition: all.3s;
 
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
