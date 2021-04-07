@@ -44,3 +44,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Running on dev mode
+
+To run this app on dev mode you just need to follow the upback steps and then running the backend on port 8080 you may be able to login on this app with the credentials:
+
+email:marcos.p.10@hotmail.com
+password: 123456
+
+Thanks for the oportunity.
