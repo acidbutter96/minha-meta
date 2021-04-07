@@ -49,7 +49,8 @@ export const MenuRoute = styled.a`
 
         &:hover {
             opacity: .7;
-            color: ${props => props.theme.colors.tertiary};
+            color: ${props => props.theme.colors.quaternary};
+            transform: translateX(4px);
         }
 
         >svg{
