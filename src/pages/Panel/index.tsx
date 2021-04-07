@@ -13,6 +13,8 @@ import {
 import SaleItem from '../../components/SaleItem';
 import Tips from '../../components/Tips';
 import Updates from '../../components/Updates';
+import Week from '../../components/Week';
+import SalesTable from '../../components/SalesTable';
 
 interface IRouteParams {
     match: {
@@ -74,20 +76,19 @@ const Panel: React.FC<IRouteParams> = ({ match }) => {
                             ></SaleItem>)}
                         </Sales>
                     </SaleTitle>
-                    <Tips></Tips>
+                    <Tips />
                 </SalesPanel>
                 <Update>
-                    <Updates>
-                        oi
+                    <Updates >
                     </Updates>
                 </Update>
             </TopWidgets>
             <BttmWidgets>
-                <WeekScore>
-                    week
+                <WeekScore >
+                    <Week></Week>
                 </WeekScore>
                 <CreateSale>
-                    create
+                    <SalesTable />
                 </CreateSale>
             </BttmWidgets>
         </Container>

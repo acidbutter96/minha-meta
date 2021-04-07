@@ -77,8 +77,16 @@ export const BttmWidgets = styled.div`
     `;
 
 export const WeekScore = styled.div`
-    background-color: ${props => props.theme.colors.quaternary};
+    display: flex;
+    padding: 20px;
+    padding-top: 0px;
+    align-items: center;
+    justify-content: center;
+    
 `;
 export const CreateSale = styled.div`
-    background-color: ${props => props.theme.colors.tertiary};
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
 `
