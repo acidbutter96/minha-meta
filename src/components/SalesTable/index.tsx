@@ -17,8 +17,16 @@ const SalesTable: React.FC = () => {
         <Container>
             <Header>
                 <div>
-                    <SearchProduct></SearchProduct>
-                    <ClientCode></ClientCode>
+                    <SearchProduct
+                        type="text"
+                        name="product"
+                        placeholder="Nome ou código do produto"
+                    />
+                    <ClientCode
+                        type="text"
+                        name="client_id"
+                        placeholder="Código do cliente"
+                    />
                 </div>
                 <Button>
                     <MdAddShoppingCart />
