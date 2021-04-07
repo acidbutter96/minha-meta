@@ -27,6 +27,8 @@ const moneyFormat = (val: number) => (NumberString.toMoney(val, {
 const SaleItem: React.FC<ISaleItem> = ({ percent, date, amount }) => {
     let color: string;
 
+    let data = date.split("-");
+
     if (percent < 0) {
         color = '.danger';
     } else {
@@ -36,14 +38,14 @@ const SaleItem: React.FC<ISaleItem> = ({ percent, date, amount }) => {
     return (
         <Container>
             <ListButton>
-                {percent < 0 ? '-' : ''} {percent * 100} %
+                {percent * 100} %
                 <MdKeyboardArrowUp className="react-icons" />
             </ListButton>
             <Amount>
                 {moneyFormat(108080.2)}
             </Amount>
             <Date>
-                12/03/2020
+                {data[2]}/{data[1]}/{data[0]}
             </Date>
         </Container>
     );
