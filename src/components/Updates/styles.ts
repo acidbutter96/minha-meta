@@ -38,7 +38,6 @@ export const Title = styled.div`
     
 `;
 export const List = styled.div`
-    background-color: red;
     width: 90%;
     height: 80%;
 
