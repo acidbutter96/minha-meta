@@ -39,9 +39,9 @@ export const MenuRoute = styled.a`
         align-items: center;
         margin: 10px 0;
 
-        font-size: 20px;
+        font-size: 15px;
         font-family: 'Roboto', sans-serif;
-        font-weight: 400;
+        font-weight: 200;
 
         cursor: pointer;
 
