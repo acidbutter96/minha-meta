@@ -11,6 +11,7 @@ export default {
         white: '#fff',
         black: '#000',
         grey: '#bfbfbf',
+        grey2: '#4A4A4A',
 
         //success: '#dc52b0',
         success: '#00EB18',

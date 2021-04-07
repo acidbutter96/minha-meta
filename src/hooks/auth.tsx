@@ -1,10 +1,11 @@
 import React, { createContext, useState, useContext } from 'react';
-import { login } from '../providers/requests';
+import { login, signin } from '../providers/requests';
 
 interface IAuthContext {
     logged: boolean;
-    signIn(email: string, password: string): void;
+    logIn(email: string, password: string): void;
     signOut(): void;
+    signIn(email: string, password: string, birthday: string, document: string): void;
 }
 
 
@@ -17,7 +18,7 @@ const AuthProvider: React.FC = ({ children }) => {
         return !!isLogged;
     });
 
-    const signIn = async (email: string, password: string) => {
+    const logIn = async (email: string, password: string) => {
 
         const response = await login(email, password);
 
@@ -31,13 +32,28 @@ const AuthProvider: React.FC = ({ children }) => {
         }
     }
 
+    const signIn = async (email: string,
+        password: string,
+        birthday: string,
+        document: string) => {
+        /* const response = await signin(email, password, birthday, document);
+        console.log(response.data);
+        if (!response.error) {
+            alert('usuário criado com sucesso');
+        } else {
+            alert(response.message);
+        } */
+    }
+
+
+
     const signOut = () => {
         localStorage.removeItem('@minha-meta:logged');
         setLogged(false);
     }
 
     return (
-        <AuthContext.Provider value={{ logged, signIn, signOut }}>
+        <AuthContext.Provider value={{ logged, logIn, signOut, signIn }}>
             {children}
         </AuthContext.Provider>
     )

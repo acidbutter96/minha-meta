@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Container,
     Header,
@@ -8,14 +8,14 @@ import {
     Bottom,
     MenuRoute
 } from './styles';
-import {
-    MdShowChart,
-    MdAttachMoney,
-    MdDashboard,
-    MdExitToApp,
-} from 'react-icons/md';
+import { MdDashboard, MdExitToApp, MdShowChart } from 'react-icons/md';
+import { useAuth } from '../../hooks/auth';
+
+
 
 const Sidebar: React.FC = () => {
+    const { signOut } = useAuth();
+
     return (
         <Container>
             <Header>
@@ -27,17 +27,17 @@ const Sidebar: React.FC = () => {
                         <MdShowChart />
                         Charts
                     </MenuRoute>
-                    <MenuRoute href="/panel/sales">
+                    {/* <MenuRoute href="/panel/sales">
                         <MdAttachMoney />
                         Vendas
-                    </MenuRoute>
+                    </MenuRoute> */}
                     <MenuRoute href="/panel/goals">
                         <MdDashboard />
                         Metas
                     </MenuRoute>
                 </Top>
                 <Bottom>
-                    <MenuRoute href="#">
+                    <MenuRoute onClick={signOut}>
                         <MdExitToApp />
                         Sair
                     </MenuRoute>

@@ -10,7 +10,7 @@ const AppRoutes: React.FC = () =>
         <Switch >
             <Route path="/" exact>
                 <Redirect to={{
-                    pathname: '/charts'
+                    pathname: '/panel/goals'
                 }} />
             </Route>
             <Route path='/charts' exact>
